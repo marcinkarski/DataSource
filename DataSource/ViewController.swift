@@ -1,20 +1,26 @@
-//
-//  ViewController.swift
-//  DataSource
-//
-//  Created by Marcin Karski on 22/10/2018.
-//  Copyright © 2018 Marcin Karski. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
+    
+    lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: view.bounds, style: .plain)
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        tableView.separatorStyle = .none
+        tableView.separatorInset = .zero
+//        tableView.delegate = self
+        //        tableView.dataSource = self
+        return tableView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setup()
     }
-
-
+    
+    private func setup() {
+        view.addSubview(tableView)
+    }
 }
-
