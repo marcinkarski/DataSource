@@ -2,7 +2,7 @@ import UIKit
 
 final class ViewController: UIViewController {
     
-    private let model = fetchData()
+    private let model = Model.fetchData()
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: view.bounds, style: .grouped)
@@ -20,6 +20,8 @@ final class ViewController: UIViewController {
     }
     
     private func setup() {
+        self.title = "DataSource"
+        navigationController?.navigationBar.prefersLargeTitles = true
         view.addSubview(tableView)
     }
 }
