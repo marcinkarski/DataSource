@@ -14,6 +14,8 @@
 		2E1E7038217E1DF8005470B6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E7037217E1DF8005470B6 /* Model.swift */; };
 		2E1E703C217F56F7005470B6 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E703B217F56F7005470B6 /* DataSource.swift */; };
 		2E1E7040217F6362005470B6 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E703F217F6362005470B6 /* TableCell.swift */; };
+		2E1E704321806E04005470B6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E704221806E04005470B6 /* Profile.swift */; };
+		2E1E704521806E4A005470B6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E704421806E4A005470B6 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		2E1E7037217E1DF8005470B6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		2E1E703B217F56F7005470B6 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		2E1E703F217F6362005470B6 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		2E1E704221806E04005470B6 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		2E1E704421806E4A005470B6 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		2E1E7024217E1B2E005470B6 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				2E1E704121806DED005470B6 /* Networking */,
 				2E1E7025217E1B2E005470B6 /* AppDelegate.swift */,
 				2E1E7027217E1B2E005470B6 /* ViewController.swift */,
 				2E1E703B217F56F7005470B6 /* DataSource.swift */,
@@ -68,6 +73,15 @@
 				2E1E7031217E1B31005470B6 /* Info.plist */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		2E1E704121806DED005470B6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2E1E704421806E4A005470B6 /* APIService.swift */,
+				2E1E704221806E04005470B6 /* Profile.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +155,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E1E7040217F6362005470B6 /* TableCell.swift in Sources */,
+				2E1E704521806E4A005470B6 /* APIService.swift in Sources */,
+				2E1E704321806E04005470B6 /* Profile.swift in Sources */,
 				2E1E7038217E1DF8005470B6 /* Model.swift in Sources */,
 				2E1E7028217E1B2E005470B6 /* ViewController.swift in Sources */,
 				2E1E703C217F56F7005470B6 /* DataSource.swift in Sources */,

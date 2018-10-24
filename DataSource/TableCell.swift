@@ -2,10 +2,30 @@ import UIKit
 
 class TableCell: UITableViewCell {
     
-    var imageBox: Model? {
+    var imageRequest: URLSessionDataTask?
+    
+    var imageBox: Profile? {
         didSet {
-            photoView.image = UIImage(named: imageBox?.image ?? "")
+            photoView.image = UIImage(named: imageBox?.avatarURL ?? "")
             nameLabel.text = imageBox?.name
+        }
+    }
+    
+    func configure(with profile: Profile) {
+        nameLabel.text = profile.name
+        loadImage(for: profile)
+    }
+    
+    func loadImage(for profile: Profile) {
+        guard let url = URL(string: profile.avatarURL) else { return }
+        let service = APIService()
+        imageRequest = service.requestImage(withURL: url) { [weak self] result in
+            switch result {
+            case .success(let image):
+                self?.imageView?.image = image
+            case .failure(let error):
+                print(error)
+            }
         }
     }
     
