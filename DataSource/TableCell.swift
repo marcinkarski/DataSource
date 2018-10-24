@@ -26,6 +26,9 @@ class TableCell: UITableViewCell {
         nameLabel.backgroundColor = .clear
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        nameLabel.layer.shadowOffset = CGSize(width: 0.2, height: 0.2)
+        nameLabel.layer.shadowOpacity = 0.5
+        nameLabel.layer.shadowRadius = 0.5
         nameLabel.textColor = .white
         nameLabel.textAlignment = .left
         return nameLabel
@@ -36,7 +39,7 @@ class TableCell: UITableViewCell {
         
         self.selectionStyle = .none
         addSubview(photoView)
-        addSubview(nameLabel)
+        photoView.addSubview(nameLabel)
         
         NSLayoutConstraint.activate([photoView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16), photoView.topAnchor.constraint(equalTo: topAnchor, constant: 16), photoView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16), photoView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0), nameLabel.leftAnchor.constraint(equalTo: photoView.leftAnchor, constant: 16), nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16), nameLabel.heightAnchor.constraint(equalToConstant: 20)])
     }
