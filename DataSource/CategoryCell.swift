@@ -20,7 +20,9 @@ class CategoryCell: UITableViewCell {
     }()
     
     internal let separatorLine: UIView = {
-        let view = UIView(frame: CGRect(x: 0, y: 50, width: 100, height: 1))
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
         return view
     }()
     
@@ -31,7 +33,8 @@ class CategoryCell: UITableViewCell {
         addSubview(titleLabel)
         addSubview(separatorLine)
         
-        NSLayoutConstraint.activate([titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16), titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16), titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16), titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0)])
+        NSLayoutConstraint.activate([titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16), titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 0), titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16), titleLabel.bottomAnchor.constraint(equalTo: separatorLine.topAnchor, constant: 0),
+            separatorLine.bottomAnchor.constraint(equalTo: bottomAnchor), separatorLine.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16), separatorLine.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16), separatorLine.heightAnchor.constraint(equalToConstant: 1)])
     }
     
     static var identifier: String {

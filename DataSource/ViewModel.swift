@@ -70,9 +70,9 @@ extension ViewModel: UITableViewDataSource {
         return UITableViewCell()
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return items[section].sectionTitle
-    }
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return items[section].sectionTitle
+//    }
 }
 
 class ViewModelAboutItem: ViewModelItem {
@@ -121,7 +121,7 @@ class ViewModelCategoryItem: ViewModelItem {
     }
     
     var sectionTitle: String {
-        return "Category"
+        return "Island"
     }
     
     var rowCount: Int {

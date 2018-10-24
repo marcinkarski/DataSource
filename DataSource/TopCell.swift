@@ -28,7 +28,7 @@ class TopCell: UITableViewCell {
         nameLabel.text = "Name"
         nameLabel.backgroundColor = .clear
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        nameLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        nameLabel.font = UIFont.boldSystemFont(ofSize: 16)
         nameLabel.layer.shadowOffset = CGSize(width: 0.2, height: 0.2)
         nameLabel.layer.shadowOpacity = 0.5
         nameLabel.layer.shadowRadius = 0.5
