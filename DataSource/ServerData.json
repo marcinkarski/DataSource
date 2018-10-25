@@ -1,0 +1,52 @@
+{
+    "data": {
+        "id": 1,
+        "about": "Best of the Canary Islands handpicked with love.",
+        "top": [
+            {
+                "name": "Puerto del Carmen",
+                "image": "img1"
+            },
+            {
+                "name": "Roque Nublo",
+                "image": "img2"
+            },
+            {
+                "name": "La Santa",
+                "image": "img3"
+            },
+            {
+                "name": "Playa de Las Teresitas",
+                "image": "img4"
+            },
+            {
+                "name": "Playa de La Tejita",
+                "image": "img5"
+            }
+        ],
+        "category": [
+            {
+                "key": "Tenerife",
+                "value": "See more"
+            },
+            {
+                "key": "Gran Canaria",
+                "value": "See more"
+            },
+            {
+                "key": "Fuerteventura",
+                "value": "See more"
+            },
+            {
+                "key": "La Palma",
+                "value": "See more"
+            },
+            {
+                "key": "Lanzarote",
+                "value": "See more"
+            }
+        ]
+    },
+    "error": 0,
+    "message": "Success"
+}

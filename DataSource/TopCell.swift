@@ -1,11 +1,14 @@
 import UIKit
 
-class TableCell: UITableViewCell {
+class TopCell: UITableViewCell {
     
-    var imageBox: Model? {
+    var item: Top? {
         didSet {
-            photoView.image = UIImage(named: imageBox?.image ?? "")
-            nameLabel.text = imageBox?.name
+            guard let item = item else { return }
+            if let image = item.image {
+                photoView.image = UIImage(named: image)
+            }
+            nameLabel.text = item.name
         }
     }
     
@@ -25,7 +28,7 @@ class TableCell: UITableViewCell {
         nameLabel.text = "Name"
         nameLabel.backgroundColor = .clear
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        nameLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        nameLabel.font = UIFont.boldSystemFont(ofSize: 16)
         nameLabel.layer.shadowOffset = CGSize(width: 0.2, height: 0.2)
         nameLabel.layer.shadowOpacity = 0.5
         nameLabel.layer.shadowRadius = 0.5
@@ -39,8 +42,7 @@ class TableCell: UITableViewCell {
         
         self.selectionStyle = .none
         addSubview(photoView)
-        photoView.addSubview(nameLabel)
-        
+        addSubview(nameLabel)
         NSLayoutConstraint.activate([photoView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16), photoView.topAnchor.constraint(equalTo: topAnchor, constant: 16), photoView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16), photoView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0), nameLabel.leftAnchor.constraint(equalTo: photoView.leftAnchor, constant: 16), nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16), nameLabel.heightAnchor.constraint(equalToConstant: 20)])
     }
     
