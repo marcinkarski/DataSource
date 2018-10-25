@@ -19,11 +19,10 @@ final class ViewController: UIViewController {
     private func setup() {
         self.title = "DataSource"
         view.addSubview(tableView)
-//        tableView.estimatedRowHeight = 100
-//        tableView.rowHeight = UITableView.automaticDimension
         tableView.register(AboutCell.self, forCellReuseIdentifier: AboutCell.identifier)
         tableView.register(TopCell.self, forCellReuseIdentifier: TopCell.identifier)
         tableView.register(CategoryCell.self, forCellReuseIdentifier: CategoryCell.identifier)
+//        tableView.register(UITableViewCell.self, forHeaderFooterViewReuseIdentifier: "footer")
         tableView.dataSource = viewModel
         tableView.delegate = self
     }
@@ -35,7 +34,7 @@ extension ViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.section{
+        switch indexPath.section {
         case 0:
             return 80
         case 1:
@@ -44,5 +43,9 @@ extension ViewController: UITableViewDelegate {
         default:
             return 50
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 100
     }
 }
