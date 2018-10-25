@@ -17,6 +17,7 @@
 		2E1E70472180B598005470B6 /* ServerData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E1E70462180B598005470B6 /* ServerData.json */; };
 		2E1E70492180C081005470B6 /* AboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E70482180C080005470B6 /* AboutCell.swift */; };
 		2E1E704B2180C259005470B6 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E704A2180C259005470B6 /* CategoryCell.swift */; };
+		2E1E704D2181B185005470B6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E704C2181B185005470B6 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		2E1E70462180B598005470B6 /* ServerData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ServerData.json; sourceTree = "<group>"; };
 		2E1E70482180C080005470B6 /* AboutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCell.swift; sourceTree = "<group>"; };
 		2E1E704A2180C259005470B6 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		2E1E704C2181B185005470B6 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			children = (
 				2E1E7025217E1B2E005470B6 /* AppDelegate.swift */,
 				2E1E7027217E1B2E005470B6 /* ViewController.swift */,
+				2E1E704C2181B185005470B6 /* TableViewController.swift */,
 				2E1E703B217F56F7005470B6 /* ViewModel.swift */,
 				2E1E7037217E1DF8005470B6 /* Model.swift */,
 				2E1E703F217F6362005470B6 /* TopCell.swift */,
@@ -153,6 +156,7 @@
 				2E1E7040217F6362005470B6 /* TopCell.swift in Sources */,
 				2E1E7038217E1DF8005470B6 /* Model.swift in Sources */,
 				2E1E7028217E1B2E005470B6 /* ViewController.swift in Sources */,
+				2E1E704D2181B185005470B6 /* TableViewController.swift in Sources */,
 				2E1E704B2180C259005470B6 /* CategoryCell.swift in Sources */,
 				2E1E703C217F56F7005470B6 /* ViewModel.swift in Sources */,
 				2E1E7026217E1B2E005470B6 /* AppDelegate.swift in Sources */,
