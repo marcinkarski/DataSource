@@ -69,10 +69,25 @@ extension ViewModel: UITableViewDataSource {
         }
         return UITableViewCell()
     }
-    
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return items[section].sectionTitle
-//    }
+}
+
+extension ViewModel: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        let label = UILabel()
+        label.text = items[section].sectionTitle
+        label.font = UIFont.systemFont(ofSize: 34, weight: .light)
+        label.textAlignment = .left
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .gray
+        view.addSubview(label)
+        label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        label.topAnchor.constraint(equalTo: view.topAnchor, constant: 16).isActive = true
+        label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        label.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16).isActive = true
+        view.backgroundColor = .white
+        return view
+    }
 }
 
 class ViewModelAboutItem: ViewModelItem {
@@ -101,7 +116,7 @@ class ViewModelTopItem: ViewModelItem {
     }
     
     var sectionTitle: String {
-        return "Top"
+        return "Popular"
     }
     
     var rowCount: Int {

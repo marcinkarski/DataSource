@@ -43,7 +43,7 @@ class TopCell: UITableViewCell {
         self.selectionStyle = .none
         addSubview(photoView)
         addSubview(nameLabel)
-        NSLayoutConstraint.activate([photoView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16), photoView.topAnchor.constraint(equalTo: topAnchor, constant: 16), photoView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16), photoView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0), nameLabel.leftAnchor.constraint(equalTo: photoView.leftAnchor, constant: 16), nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16), nameLabel.heightAnchor.constraint(equalToConstant: 20)])
+        NSLayoutConstraint.activate([photoView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16), photoView.topAnchor.constraint(equalTo: topAnchor, constant: 16), photoView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16), photoView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16), photoView.heightAnchor.constraint(equalToConstant: bounds.width + 16), nameLabel.leftAnchor.constraint(equalTo: photoView.leftAnchor, constant: 16), nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -32), nameLabel.heightAnchor.constraint(equalToConstant: 20)])
     }
     
     static var identifier: String {

@@ -33,7 +33,7 @@ class CategoryCell: UITableViewCell {
         addSubview(titleLabel)
         addSubview(separatorLine)
         
-        NSLayoutConstraint.activate([titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16), titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 0), titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16), titleLabel.bottomAnchor.constraint(equalTo: separatorLine.topAnchor, constant: 0),
+        NSLayoutConstraint.activate([titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16), titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 0), titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16), titleLabel.bottomAnchor.constraint(equalTo: separatorLine.topAnchor, constant: 0), titleLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: bounds.width / 8),
             separatorLine.bottomAnchor.constraint(equalTo: bottomAnchor), separatorLine.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16), separatorLine.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16), separatorLine.heightAnchor.constraint(equalToConstant: 1)])
     }
     

@@ -4,7 +4,7 @@ class AboutCell: UITableViewCell {
     
     var item: ViewModelItem? {
         didSet {
-            guard  let item = item as? ViewModelAboutItem else { return }
+            guard let item = item as? ViewModelAboutItem else { return }
             aboutLabel.text = item.about
         }
     }
