@@ -24,11 +24,13 @@ class ViewModel: NSObject {
             let aboutItem = ViewModelAboutItem(about: about)
             items.append(aboutItem)
         }
+        
         let top = model.top
         if !model.top.isEmpty {
             let topItem = ViewModelTopItem(top: top)
             items.append(topItem)
         }
+        
         let category = model.category
         if !category.isEmpty {
             let categoryItem = ViewModelCategoryItem(category: category)
@@ -71,15 +73,26 @@ extension ViewModel: UITableViewDataSource {
     }
 }
 
+class Label: UILabel {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        translatesAutoresizingMaskIntoConstraints = false
+        font = UIFont.systemFont(ofSize: 34, weight: .light)
+        textAlignment = .left
+        textColor = .gray
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
 extension ViewModel: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let item = items[section].sectionTitle
+        let label = Label()
+        label.text = item
         let view = UIView()
-        let label = UILabel()
-        label.text = items[section].sectionTitle
-        label.font = UIFont.systemFont(ofSize: 34, weight: .light)
-        label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .gray
         view.addSubview(label)
         label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
         label.topAnchor.constraint(equalTo: view.topAnchor, constant: 16).isActive = true
